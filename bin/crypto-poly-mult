@@ -1,0 +1,17 @@
+#!/usr/bin/env python3
+from numpy import convolve
+
+def main():
+    poly1_str = input("Please input the first polynomial coefficients: ")
+    poly2_str = input("Please input the second polynomial coefficients: ")
+    poly1 = [ int(x) for x in poly1_str.split()]
+    poly2 = [ int(x) for x in poly2_str.split()]
+    mod_str = input("Please input the mod (-1 without mod): ")
+    mod_int = int(mod_str)
+
+    if mod_int == -1:
+        print(convolve(poly1, poly2))
+    else:
+        print([x % mod_int for x in convolve(poly1, poly2)])
+
+main()
