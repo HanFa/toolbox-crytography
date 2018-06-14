@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-import utilalgorithms
+import crypto
 
 def main():
     text = input("Please input the text:")
-    caesar = utilalgorithms.Caesar(text)
+    caesar = crypto.Caesar(text)
     caesar.print_all_keys()
 
 main()

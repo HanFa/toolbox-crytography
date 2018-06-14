@@ -1,0 +1,9 @@
+#!/usr/bin/env python3
+from crypto.ordergenerator import OrderGenertor
+
+def main():
+    mod_num = int(input("Please input the mod base: "))
+    og = OrderGenertor(mod_num)
+    og.print_table()
+
+main()

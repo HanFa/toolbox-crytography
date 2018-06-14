@@ -5,6 +5,10 @@ setup(name='toolbox-cryptography',
       version='0.1',
       author='Fang Han',
       author_email='hanfa@umich.edu',
-      packages=['attacktypes', 'utilalgorithms'],
-      scripts=['bin/crypto-attack-types', 'bin/crypto-caeser', 'bin/crypto-poly-mult']
+      packages=['attacktypes', 'crypto'],
+      scripts=['bin/crypto-attack-types',
+               'bin/crypto-caeser',
+               'bin/crypto-poly-mult',
+               'bin/crypto-order-generate',
+               'bin/crypto-isprime']
       )
