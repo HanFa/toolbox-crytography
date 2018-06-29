@@ -10,5 +10,6 @@ setup(name='toolbox-cryptography',
                'bin/crypto-caeser',
                'bin/crypto-poly-mult',
                'bin/crypto-order-generate',
-               'bin/crypto-isprime']
+               'bin/crypto-isprime',
+               'bin/crypto-jacobi']
       )
