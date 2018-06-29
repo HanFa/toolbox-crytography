@@ -60,3 +60,11 @@ def totient(n: int) -> int:
             amount += 1
 
     return amount
+
+def discrete_log(g: int, h: int, n: int):
+    """Solve the DLP problem. Find x such that g^x = h mod n."""
+    for x in range(1, n):
+        if g ** x % n == h:
+            return x
+
+    return -1
