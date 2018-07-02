@@ -6,6 +6,28 @@ def factors(n: int, only_primes: bool = True):
                 ([i, n//i] for i in range(1, int(pow(n, 0.5) + 1)) if n % i == 0)))
     return factors if not only_primes else [x for x in factors if isPrime(x)]
 
+
+def pollard_factors(n: int):
+    """
+    Integer factorization using Pollard-Pho algorithm.
+    Return -1 if n is a prime.
+    Else return one of the factors of n
+    """
+    a = 2
+    b = 2
+    d = 1
+
+    while d == 1:
+        a = (a ** 2 + 1) % n
+        b = ((b ** 2 + 1) ** 2 + 1) % n
+        d = gcd(a - b, n)
+
+    if d == n:
+        return -1
+    else:
+        return d
+
+
 def get_factor_power(factor:int, n:int) -> int:
     assert n % factor == 0
     idx = 1
