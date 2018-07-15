@@ -90,3 +90,9 @@ def discrete_log(g: int, h: int, n: int):
             return x
 
     return -1
+
+def discrete_linear(a: int, b: int, n: int):
+    """Solve the discrete linear problem: ax = b mod n."""
+    for x in range(1, n):
+        if (a * x) % n == b:
+            return x
